@@ -163,7 +163,7 @@ void OLED_Putchar(char ch) {
     const unsigned char mask[]={1, 3, 7, 0xf };
 
     for(i=0; i<6; i++) {
-        unsigned long word;
+        unsigned long word = 0;
         byte = *f++ << 1;
         if (i==5) byte = 0;
         for(j=0; j<8; j++) { // expand byte to word
